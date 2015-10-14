@@ -10,3 +10,7 @@
    <s> renders text with a line through it
 
 2. They are used to help define the rows, columns and body of a table, where <thead> defines a set of rows defining the head of the columns of a table, <tfoot> defines a set of rows summarizing the columns of the table and <tbody> is used to group the body content in a table. All three are used in conjunction with eachother to help specify each part of a table.
+
+12. 
+13.
+15.
