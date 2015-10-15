@@ -1,16 +1,15 @@
 .image1{
-	margin-left: 200px;
-    margin-right: 200px;
+	margin-left: 250px;
     height: 500px;
 }
 
 .image2{
-	margin-left: 550px;
+	margin-left: 500px;
     height: 700px;
 }
 
 .image3{
-	margin-left: 100px;
+	margin-left: 70px;
     height: 500px;
 }
 
@@ -36,7 +35,32 @@ table, th, td{
 	border-collapse: collapse;
 }
 
+.heading{
+    text-align: center;
+}
 
+.table{
+    margin-left: 350px;
+}
 
+.form1{
+    margin-left: 500px;
+}
 
+.form2{
+    margin-left: 500px;
+}
+
+.video{
+    margin-left: 400px;
+}
+
+.map{
+    margin-left: 330px;
+}
+
+body{
+    background-color: red;
+    color: yellow;
+}
 

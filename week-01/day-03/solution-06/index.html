@@ -43,7 +43,7 @@
         <li>A fox was found on the 72nd floor towards the end of construction. The fox, which was nicknamed Romeo by staff, is believed to have survived on food left by construction workers.</li>
       </ul>
   <div>   
-    <h3>Just a few of the tenants at the Shard</h3>
+    <h3 class="heading">Just a few of the tenants at the Shard</h3>
       <table id="shard-tenants" class="table">
         <tr>
           <th>Company</th>
@@ -77,9 +77,9 @@
         </tr>
       </table>
   </div>
+    <h3 class="heading">Search for a tenant in the Shard</h3>
   <div>
       <form id="search-form" class="form1" name="searchform" onSubmit="return dosearch();">
-         <h3>Search for a tenant in the Shard</h3>
           Search:<br>
             <input name="sengines" type="radio" value="http://www.the-shard.com"> The Shard<br>
             <input name="sengines" type="radio" value="http://www.google.com/search?q="> The Web<br>
@@ -88,8 +88,9 @@
           <input type="submit" name="SearchSubmit" value="Search">
       </form>
   </div>
+    <h3 class="heading">Reservation Form</h3>
+  <div>
       <form id="res-form" class="form2">
-         <h3>Reservation Form</h3>
            Date<input type="text" name="date" size="15" maxlength="99" required />
            <br>
            Number of People<input type="text" name="number of people" value="1"  size="10" maxlength="99" />
@@ -117,22 +118,18 @@
            <input type="submit" value="click here to submit" />
            <input type="reset" value="clear this form" />
       </form>
-    <h3>A Video Introduction to the Shard</h3>
+  </div>    
+    <h3 class="heading">A Video Introduction to the Shard</h3>
       <iframe id="shard-video" class="video" width="450" height="315" src="https://www.youtube.com/embed/zXZDfhdvW1o?autoplay=0"></iframe>
-    <h3>Location of the Shard</h3>
+    <h3 class="heading">Location of the Shard</h3>
       <iframe id="shard-location" class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.4795021394034!2d-0.0884891845605903!3d51.50441842963466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487603509f948dfb%3A0x1c6402febf9f78c8!2sThe+Shard%2C+London+SE1!5e0!3m2!1sen!2suk!4v1444779397962" width="600" height="450" style="border:0" allowfullscreen></iframe>
-    <h3>Further Information about the Shard</h3>
+  <div class="info">    
+    <h3 class="fur-info">Further Information about the Shard</h3>
         <ul id="more-shard-info" class="news">
           <li><a href="http://www.telegraph.co.uk/culture/art/architecture/9826426/Is-the-Shard-really-worse-than-the-Taliban.html" target="_blank">Is the Shard really worse than the Taliban</a></li>
           <li><a href="http://www.dailymail.co.uk/news/article-2169097/The-Shard-London-opening-Laser-dazzles--pay-25-ride-top.html" target="_blank">Laser show dazzles London</a></li>
           <li><a href="http://www.theguardian.com/books/2015/mar/27/will-self-on-the-meaning-of-skyscrapers" target="_blank">Will Self on the meaning on skyscrapers</a></li>
         </ul>
-    <h3>Let us know what you think!</h3>
-        <form id="comments-form" class="comments">
-            <div>
-                <textarea rows="10" cols="40" name="comments" id="comments"></textarea>
-            </div>
-          <input type="submit" value="submit">
-        </form>
+  </div>      
   </body>
 </html>
