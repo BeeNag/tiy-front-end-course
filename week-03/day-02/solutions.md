@@ -81,7 +81,7 @@
       var text4 = document.createTextNode ("The Shard's construction began in March 2009");
       span.appendChild (text4);
       element3.appendChild (span);
-      var text5 = document.createTextNode ("; it was topped out on 30 March 2012 and inaugurated on 6 July 2012. Practical completion was achieved in November 2012. The tower's privately operated observation deck, the View from the Shard, was opened to the public on");
+      var text5 = document.createTextNode ("; it was topped out on 30 March 2012 and inaugurated on 6 July 2012. Practical completion was achieved in November 2012. The tower's privately operated observation deck, the View from the Shard, was opened to the public on ");
       element3.appendChild (text5);
       var strong = document.createElement ("strong");
       var text6 = document.createTextNode ("1 February 2013");
@@ -198,3 +198,5 @@ var name = 'Art';
 
 console.log(dayGreeting(name));
 console.log(nightGreeting(name));
+
+5. 'p' has 2 attribute nodes (id = 'intro' and class = 'big') and 3child nodes (2 text nodes and an element node).
