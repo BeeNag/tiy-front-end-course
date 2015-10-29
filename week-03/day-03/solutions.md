@@ -69,10 +69,8 @@
       var intervalID = window.setInterval(myCallback, 2000, [images]);
 
       function myCallback() {
-        
-      
-      var imgsrc = element.setAttribute ("src", images[sum]);
-      sum++;
+        var imgsrc = element.setAttribute ("src", images[sum]);
+        sum++;
         
         if (sum >= images.length) {sum = 0};
       
