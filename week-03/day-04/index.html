@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <style>
+
+    .bigImage { 
+      position: relative;
+      z-index: 0;
+    }
+
+    .selected {
+      border: 2px solid blue;
+    }
+
+    .leftDiv {
+      position: relative;
+      z-index: 5;
+      float: left;
+      top: 32vw;
+      width: 10%;
+    }
+
+    .rightDiv {
+      position: relative;
+      z-index: 5;
+      float: right;
+      top: 32vw;
+      width: 10%;
+    }
+
+    .col-xs-3 {
+      border: 20px solid black;
+    }
+
+  </style>
+  <script>
+    setTimeout(function () {
+
+      var link = document.createElement("link");
+      link.setAttribute("rel", "stylesheet");
+      link.setAttribute("href", "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css");
+      document.head.appendChild(link);
+      
+      var images = ["http://www.gengame.net/wp-content/gallery/final-fantasy-xiv-a-realm-reborn-character-screens/ffxiv-a-realm-reborn-character-renders-3.jpg", "http://www.gengame.net/wp-content/gallery/final-fantasy-xiv-a-realm-reborn-character-screens/ffxiv-a-realm-reborn-character-renders-7.jpg", "http://www.gengame.net/wp-content/gallery/final-fantasy-xiv-a-realm-reborn-character-screens/ffxiv-a-realm-reborn-character-renders-4.jpg", "http://www.gengame.net/wp-content/gallery/final-fantasy-xiv-a-realm-reborn-character-screens/ffxiv-a-realm-reborn-character-renders-1.jpg"];
+      
+      var element = document.createElement("div");
+      var bootDiv = element.setAttribute("class", "container");
+      var element2 = document.createElement("div");
+      var bigDiv = element2.setAttribute("class", "row");
+      var bigImage = document.createElement("img");
+      bigImage.setAttribute("class", "bigImage");
+      var imgsrc = bigImage.setAttribute("src", images[0]);
+      var imgalt = bigImage.setAttribute("alt", "PICTURE");
+      var imgWidth = bigImage.setAttribute("width", "100%");
+      var leftDiv = document.createElement("div");
+      leftDiv.setAttribute("class", "leftDiv");
+      var leftButton = document.createElement("img");
+      leftButton.setAttribute("src", "file:///Users/benedictnagle-rose/Gits/tiy-front-end-course/week-03/day-04/Arrow-Left.png");
+      leftButton.setAttribute("width", "70%");
+      leftButton.setAttribute("class", "leftButton");
+      var rightDiv = document.createElement("div");
+      rightDiv.setAttribute("class", "rightDiv");
+      var rightButton = document.createElement("img");
+      rightButton.setAttribute("src", "file:///Users/benedictnagle-rose/Gits/tiy-front-end-course/week-03/day-04/Arrow-Right.png");
+      rightButton.setAttribute("width", "70%");
+      rightButton.setAttribute("class", "rightButton");
+      element2.appendChild(leftDiv);
+      leftDiv.appendChild(leftButton);
+      element2.appendChild(rightDiv);
+      rightDiv.appendChild(rightButton);
+      element.appendChild(element2);
+      element2.appendChild(bigImage);
+      
+      
+      
+      var element3 = document.createElement("div");
+      var smallDiv = element3.setAttribute("class", "row");
+      element3.setAttribute("id", "lowerRow");
+      
+      
+      for (iterator = 0; iterator < images.length; iterator++) {
+        var smallImage = document.createElement("img");
+        var imgsrc = smallImage.setAttribute ("src", images[iterator]);
+        var imgalt = smallImage.setAttribute("alt", "PICTURE");
+        var imgWidth = smallImage.setAttribute("width", "100%");
+        
+        var thumbDiv = document.createElement("div");
+        var thumbDivAt = thumbDiv.setAttribute("class", "col-xs-3 col-sm-3 col-md-3");
+        thumbDiv.appendChild(smallImage);
+        element3.appendChild(thumbDiv);
+        
+        
+      }
+      
+      element.appendChild(element3);
+      document.body.appendChild(element);
+
+      var lowerRow = document.querySelector("div");
+
+      var eventFlow = false;
+      var right = 1;
+      var left = 3;
+
+      lowerRow.addEventListener("click", function (event) {
+        var targetElement = event.target;
+
+        if (targetElement.tagName === 'IMG') { 
+          if (targetElement.getAttribute('class') === 'selected') {
+            targetElement.removeAttribute('class');
+          
+          } else {
+
+            if (targetElement.className === "rightButton") {
+              console.log("right");
+              var srcChange = targetElement.getAttribute("src");
+              var selector = document.querySelector(".bigImage");
+              selector.setAttribute("src", images[right]);
+              right++;
+
+              if (right > images.length - 1) {
+                right = 0;
+              }
+              
+          } else if (targetElement.className === "leftButton") {
+              var srcChange2 = targetElement.getAttribute("src");
+              var selector2 = document.querySelector(".bigImage");
+              selector2.setAttribute("src", images[left]);
+              left--;
+
+              if (left < 0) {
+                left = images.length - 1;
+              }
+              
+          } else { 
+
+              targetElement.setAttribute('class', 'selected');
+              var cSrc = targetElement.getAttribute("src");
+              var selLargePic = document.querySelector(".bigImage");
+              selLargePic.setAttribute("src", cSrc);
+            }
+          }
+        }
+      }, eventFlow);
+
+            }, 0);
+</script>
+</head>
+<body>
+
+</body>
+</html>
