@@ -11,7 +11,7 @@
     }
 
     .selected {
-      border: 2px solid blue;
+      border: 5px solid blue;
     }
 
     .leftDiv {
@@ -106,9 +106,9 @@
       lowerRow.addEventListener("click", function (event) {
         var targetElement = event.target;
 
-        if (targetElement.tagName === 'IMG') { 
-          if (targetElement.getAttribute('class') === 'selected') {
-            targetElement.removeAttribute('class');
+        if (targetElement.tagName === "IMG") { 
+          if (targetElement.getAttribute("class") === "selected") {
+            targetElement.setAttribute("class");
           
           } else {
 
@@ -135,11 +135,12 @@
               
           } else { 
 
-              targetElement.setAttribute('class', 'selected');
+              targetElement.removeAttribute("class", "selected");
               var cSrc = targetElement.getAttribute("src");
               var selLargePic = document.querySelector(".bigImage");
               selLargePic.setAttribute("src", cSrc);
-            }
+
+            } 
           }
         }
       }, eventFlow);
