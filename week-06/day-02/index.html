@@ -1,0 +1,27 @@
+function sum(a,b) {
+  if (arguments.length === 2) {
+    return a + b;
+  } else if (arguments.length === 1) {
+    return (function (b) {
+      return b + a;
+    });
+  }
+}
+
+console.log(sum(5, 10));
+console.log(sum(5)(10));
+
+function sum() {
+	if (arguments.length > 1) {
+		return sum; 
+	} else if (arguments.length === 1) {
+		return (function (arguments[0]) {
+			return sum;
+		})
+	}
+}
+
+
+console.log(sum(1)(2)(3)(4)(5)(5, 6, 7));
+console.log(sum(10)(20)(1, 2)); // 33
+console.log(sum(100, 200));
